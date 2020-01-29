@@ -20,7 +20,6 @@
   --gray-neutral-color: #63717d;
 }
 
-
 body {
   padding: 0;
   margin: 0;
@@ -43,7 +42,6 @@ body {
 /*******************************
 *  START - Navigation Style    
 *******************************/
-
 
 .navbar {
   height: 30px;
@@ -81,19 +79,28 @@ body {
   align-items: center;
 }
 
-
 /*******************************
 *    END - Navigation Style    
 *******************************/
-
 
 /*******************************
 *    Main Container Style
 *******************************/
 
+.container {
+  min-height: 100vh;
+  width: 100vw;
+  display: flex;
+  flex-direction: column;
+  justify-content: flex-start;
+  align-items: center;
+  align-content: center;
+  margin-top: 2rem;
+}
+
 svg {
-  fill:white;
-  background: rgba(0,0,0,0.1);
+  fill: white;
+  background: rgba(0, 0, 0, 0.1);
   padding: 20px;
   border-radius: 50%;
   width: 200px;
@@ -101,10 +108,12 @@ svg {
 }
 
 .wrapper {
-  padding: 20px;
+  padding: 2rem;
   max-width: 350px;
-  background: rgba(255,255,255,0.95);
-  box-shadow: 0 0 0 10px rgba(0,0,0,0.1);
+  background: rgba(255, 255, 255, 0.95);
+  box-shadow: 0 0 0 10px rgba(0, 0, 0, 0.1);
+  margin: 2rem;
+  margin-top: 4rem;
 }
 
 h2 {
@@ -121,7 +130,7 @@ h2 {
 }
 
 .plates li {
-  border-bottom: 1px solid rgba(0,0,0,0.2);
+  border-bottom: 1px solid rgba(0, 0, 0, 0.2);
   padding: 10px 0;
   font-weight: 100;
   display: flex;
@@ -137,12 +146,12 @@ h2 {
 }
 
 .plates input + label:before {
-  content: '⬜️';
+  content: "⬜️";
   margin-right: 10px;
 }
 
 .plates input:checked + label:before {
-  content: '🌮';
+  content: "🌮";
 }
 
 .add-items {
@@ -152,9 +161,8 @@ h2 {
 .add-items input {
   padding: 10px;
   outline: 0;
-  border: 1px solid rgba(0,0,0,0.1);
+  border: 1px solid rgba(0, 0, 0, 0.1);
 }
-
 
 /*******************************
 *     Footer and SVG
