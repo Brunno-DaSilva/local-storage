@@ -1,4 +1,4 @@
-# Local Storage
+# Local Storage :convenience_store:
 
 #### Tools:
 
