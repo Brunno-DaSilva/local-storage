@@ -1,6 +1,7 @@
 @import url("https://fonts.googleapis.com/css?family=Rock+Salt&display=swap");
 @import url("https://fonts.googleapis.com/css?family=Shadows+Into+Light+Two&display=swap");
 @import url("https://fonts.googleapis.com/css?family=Titillium+Web&display=swap");
+@import url("https://fonts.googleapis.com/css?family=Montserrat&display=swap");
 
 :root {
   --main-bg: #343d46;
@@ -33,6 +34,22 @@ body {
   justify-content: space-between;
 }
 
+body {
+  font-family: "Lora", serif;
+  overflow: hidden;
+}
+
+h1,
+h2,
+h3,
+h4,
+h5,
+h6 {
+  font-family: "Montserrat", sans-serif;
+  font-weight: 300;
+  text-transform: uppercase;
+}
+
 *,
 *:before,
 *:after {
@@ -43,22 +60,27 @@ body {
 *  START - Navigation Style    
 *******************************/
 
+header {
+  z-index: 100;
+}
 .navbar {
   height: 30px;
-  background-color: var(--nave-light-blue);
+  background-color: var(--main-bg);
   text-align: center;
   display: flex;
   flex-direction: row;
   justify-content: center;
   align-items: center;
-  border-bottom: 2px solid var(--details-light-blue);
+  border-bottom: 2px solid var(--farting-yellow);
   padding: 20px !important;
   z-index: 20;
+  z-index: 100;
 }
 
 .navbar img {
   width: 25px;
   height: auto;
+  z-index: 100;
 }
 .navbar a {
   text-decoration: none;
@@ -67,6 +89,7 @@ body {
   padding: 20px;
   font-size: 1rem;
   font-family: "Muli", sans-serif;
+  z-index: 100;
 }
 .navbar a:hover {
   color: var(--farting-yellow);
@@ -77,6 +100,7 @@ body {
   display: flex;
   justify-content: space-around;
   align-items: center;
+  z-index: 100;
 }
 
 /*******************************
@@ -95,28 +119,65 @@ body {
   justify-content: flex-start;
   align-items: center;
   align-content: center;
-  margin-top: 2rem;
 }
 
-svg {
-  fill: white;
-  background: rgba(0, 0, 0, 0.1);
-  padding: 20px;
-  border-radius: 50%;
-  width: 200px;
-  margin-bottom: 50px;
+.fullscreen-video-wrap {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100vh;
+  overflow: hidden;
+}
+
+.fullscreen-video-wrap video {
+  min-height: 100%;
+  min-width: 100%;
+}
+
+.overlay {
+  height: 100vh;
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100vw;
+  z-index: 1;
+  background: #2d2e2e;
+  opacity: 0.85;
+}
+
+/* .overlay {
+  position: absolute;
+  width: 100vw;
+  height: 100vh;
+  background-color: black;
+  opacity: 0.7;
+  z-index: 1;
+} */
+
+.title {
+  margin-top: 5rem;
+  z-index: 100;
+}
+
+.title h2 {
+  color: white;
+  font-size: 2rem;
 }
 
 .wrapper {
   padding: 2rem;
-  max-width: 350px;
-  background: rgba(255, 255, 255, 0.95);
-  box-shadow: 0 0 0 10px rgba(0, 0, 0, 0.1);
+  width: 50vw;
+  min-height: 50vh;
+  background: rgba(255, 255, 255, 0.31);
   margin: 2rem;
   margin-top: 4rem;
+  z-index: 100;
+  color: #f7f4f4;
 }
 
 h2 {
+  font-family: "Montserrat", sans-serif;
   text-align: center;
   margin: 0;
   font-weight: 200;
@@ -130,7 +191,7 @@ h2 {
 }
 
 .plates li {
-  border-bottom: 1px solid rgba(0, 0, 0, 0.2);
+  border-bottom: 1px solid var(--color-steal-blue);
   padding: 10px 0;
   font-weight: 100;
   display: flex;
@@ -158,19 +219,29 @@ h2 {
   margin-top: 20px;
 }
 
-.add-items input {
-  padding: 10px;
+.add-items input[type="text"] {
+  margin-top: 11rem;
+  width: 25vw;
+  padding: 1rem;
   outline: 0;
   border: 1px solid rgba(0, 0, 0, 0.1);
+  border-radius: 2px;
+  font-size: 0.9rem;
+}
+.add-items input[type="submit"] {
+  width: 10vw;
+  padding: 1rem;
+  font-size: 0.9rem;
+  outline: 0;
+  background-color: var(--dark-font-color-title);
+  border: 1px solid rgba(0, 0, 0, 0.1);
+  color: var(--color-steal-blue);
+  border-radius: 2px;
 }
 
 /*******************************
 *     Footer and SVG
 *******************************/
-svg {
-  margin-bottom: -35px;
-  z-index: 5;
-}
 
 footer {
   font-family: "Shadows Into Light Two", cursive;
